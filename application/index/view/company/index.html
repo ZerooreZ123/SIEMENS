@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公司简介</title>
+    <link rel="stylesheet" href="__CDN__/assets/css/frontend/reset.css">
+    <link rel="stylesheet" href="__CDN__/assets/css/frontend/companyProfile.css">
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="__CDN__/assets/js/frontend/flexible.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="wrapper_container">
+        <div class="tab_switch">
+            <div class="switch">公司简介</div>
+            <div class="switch">公司实力</div>
+        </div>
+        <div class="container_box">
+            <div class="container_1">
+                <div class="content">
+                    <div class="title">西门子股份公司</div>
+                    <div class="banner"><img src="__CDN__/assets/img/frontend/advert/main_banner2.jpg"></div>
+                    <div class="frame">
+                        <p class="frame_content">
+                            西门子股份公司是全球领先的技术企业，成立165余年来，始终以卓越的工程技术、不懈的创新追求、优良的品质、出众的可靠性及广泛的国际性在业内独树一帜。西门子业务遍及全球200多个国家，专注于电气化、自动化和数字化领域。
+                            镇江西门子母线有限公司成立于1998年8月，是西门子全球五大母线生产基地之一，由西门子和大全集团在低压母线领域联手组建，厂房占地面积4万平米，目前有员工800余人，产品主要面向中国及东南亚市场。
+                        </p>
+                        <img src="__CDN__/assets/img/frontend/advert/quotes.png">
+                    </div>
+                </div>
+                <div class="progressBar_box">
+                    <ul class="progressBar">
+                        <li class="single_photo"></li>
+                        {foreach name="list" item="vo"}
+                        <li class="single">
+                            <a href="{:url('company/details',['id'=>$vo.id])}">
+                                <div class="single_container">
+                                    <div class="single_content"><img src="__CDN__{$vo.image}"></div>
+                                    <div class="single_title">{$vo.title}</div>
+                                </div>
+                            </a>
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+            <div class="container_2">
+                <div class="module">
+                    <p class="module_content">
+                        公司拥有亨罗布全自动冲铆装配流水线4条，德国进口真空搅拌铸件设备，德国多工位数控冲床3台，意大利多功能折弯机2台，意大利高精度铜排切割机2台，母线槽全自动检测设备4套，及多种先进气动冲床钣金加工设备80余套。公司不仅拥有多种先进齐全的生产设备，而且采用国际最先进的生产管理软件（如：与清华大学合作开发的EPR系统及母线造型设计系统），并严格实行高效的6S管理体系。重要生产环节由德国专家定点指导，质量由德方专家层层把关。所有生产工序严格按照ISO9001和ISO14001标准实施。1998年公司被评为高新技术企业，产品连续17年被评为“国家高新技术产品”；2014年公司还荣膺“国家火炬计划重点高新技术企业”称号。
+                    </p>
+                    <div class="module_box"><img src="__CDN__/assets/img/frontend/advert/quotes.png"></div>
+                </div>
+                <div class="imgCase_1"><img src="__CDN__/assets/img/frontend/advert/scale_1.jpg"></div>
+                <div class="imgCase_2">
+                    <div class="title">西门子股份公司</div>
+                    <div class="img_box"><img src="__CDN__/assets/img/frontend/advert/scale_2.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function() {
+
+        $('.tab_switch .switch').eq(0).addClass('switch_1');
+        
+        // tab切换
+        $('.tab_switch .switch').on('click',function(){
+            $('.tab_switch .switch').removeClass('switch_1');
+            $(this).addClass('switch_1');
+
+            var num =$(".tab_switch .switch").index(this);
+            $(".container_box").children().hide();
+            $(".container_box").children().eq(num).show();
+        });
+    });
+</script>
+</body>
+</html>

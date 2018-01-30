@@ -1,0 +1,61 @@
+body {
+    background:linear-gradient(left, #00a6d8 ,#2fbbbe);
+    background: -moz-linear-gradient(left ,#00a6d8 ,#2fbbbe);
+    background: -webkit-linear-gradient(left ,#00a6d8,#2fbbbe);
+    background: -o-linear-gradient(left ,#00a6d8 ,#2fbbbe);
+    background: -ms-linear-gradient(left ,#00a6d8 , #2fbbbe);
+    overflow: hidden;
+}
+
+.title {
+    margin-top: 1.96rem;
+    height: 3.12rem;
+    background: url('../../img/frontend/imgs/title.png') no-repeat left center;
+    background-size: auto 100%;
+}
+
+.container {
+    transform: rotate(-45deg);
+    width: 11rem;
+    position: absolute;
+    left: -0.88rem;
+    top: 8rem;
+}
+
+.grid {
+    overflow: hidden;
+}
+
+.grid > div {
+    float: left;
+    width: 1.8933rem;
+    height: 1.9067rem;
+    margin: 0.0933rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid > div.blue {
+    background: url('../../img/frontend/imgs/block1.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.grid > div.white {
+    background: url('../../img/frontend/imgs/block0.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.grid > div.blue a,.grid > div.white a{
+    display: inline-block;
+    height: 1.3rem;
+    width: 1.3rem;
+    transform: rotate(45deg);
+    border: none;
+    padding-bottom: 0.2rem;
+}
+
+.grid img {
+    width: 100%;
+    height: 100%;
+}

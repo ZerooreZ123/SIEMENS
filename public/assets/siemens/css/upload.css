@@ -1,0 +1,112 @@
+body {
+  font-family: "宋体",-apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+  background: #eeeeee;
+}
+
+.wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.wrapper .wrapper_header{
+    
+}
+.wrapper .wrapper_header .header_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:1.173rem ;
+    padding: 0 0.266rem;
+    line-height: 1.173rem;
+    font-size: 0.506rem;
+    font-weight: bold;
+    color: #fff;
+    background:#393a3e;
+
+}
+.header_container .back{
+    display: inline-block;
+    width: 0.293rem;
+    height: 0.666rem;
+    background: url(../img/icon/back.png)  center center no-repeat;
+}
+.header_container #title{
+    padding-left: 0.266rem;
+}
+.header_container .open{
+    display: inline-block;
+    width:0.24rem ;
+    height: 0.85rem;
+    background: url(../img/icon/open.png) center center no-repeat;
+}
+.wrapper_header .subtitle_container{
+    margin-top: 1.173rem;
+    padding: 0 0.266rem;
+    height: 1rem;
+    margin-bottom:0.266rem;
+    font-size: 0.4rem;
+    font-weight: 700;
+    background: #fff;
+}
+
+.subtitle_container .icon3{
+    width: 0.533rem;
+    height:0.466rem ;
+    background: url(../img/icon/icon3.png) center center no-repeat;
+}
+.wrapper .wrapper_content{
+    padding: 0 0.266rem;
+    background: #fff;
+}
+.wrapper_content .content .first_p,.wrapper_content .content .second_p{
+    line-height:0.426rem ;
+    font-size:0.32rem ;
+    font-weight: 700;
+    text-indent: 0.64rem;
+}
+.wrapper_content .content .first_p{
+    padding: 0.346rem 0;
+}
+.wrapper_content .content .second_p{
+    padding: 0.56rem 0 0.373rem;
+}
+.wrapper_content .content img{
+    width: 100%;
+}
+.wrapper_content .input{
+    position: relative;
+}
+.wrapper_content .input .input_block{
+    height: 2.266rem;
+    width: 100%;
+    border: 0;
+    font-size: 0.32rem;
+    font-weight: 500;
+    color: #dfdfdf;
+    overflow: hidden;
+    resize: none;
+}
+.wrapper_content .input .icon{
+    position: absolute;
+    bottom:0.4rem ;
+    right: 0;
+    height: 0.533rem;
+    width:0.613rem ;
+    background: url(../img/icon/icon3.png) center center no-repeat;
+}
+.wrapper .button_container{
+    background: #eee;
+}
+.wrapper .button{
+    width:9.22rem ;
+    height: 0.933rem;
+    text-align: center;
+    margin:0.573rem 0.35rem;
+    border-radius:0.08rem;
+    color: #fff;
+    background: #30bbbe;
+    border: none;
+    font-size: 0.4rem;
+    font-size: 700;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>部分业绩</title>
+    <link rel="stylesheet" href="__CDN__/assets/css/frontend/reset.css">
+    <link rel="stylesheet" href="__CDN__/assets/css/frontend/achievement.css">
+    <script src="__CDN__/assets/js/frontend/flexible.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="wrapper_container">
+        <div class="main_banner">
+            <img src="__CDN__/assets/img/frontend/advert/achievement_banner.jpg">
+        </div>
+        <ul class="achievement_list">
+            {foreach name="list" item="vo"}
+            <a href="{:url('Achievement/details',['id'=>$vo.id])}">
+                <li class="achievement_single">
+                    <p class="text">{$vo.title}</p>
+                    <div class="img_box"><img src="__CDN__{$vo.image}"></div>
+                </li>
+            </a>
+            {/foreach}
+        </ul>
+    </div>
+</div>
+</body>
+</html>

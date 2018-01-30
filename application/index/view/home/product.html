@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>产品介绍列表页</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .title {
+            padding: 10px 30px;
+            /*background-color: #f0f;*/
+        }
+
+        .title-cen {
+            border: 1px solid #ccc;
+            border-radius: 14px;
+            background-color: #F8F6F7;
+            color: #C6C4C5;
+        }
+
+        .title-cen div {
+            display: inline-block;
+            width: 154px;
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        .container {
+            /*padding: 10px;*/
+            background-color: #EEEEEE;
+            text-align: center;
+        }
+
+        .grid {
+            display: inline-block;
+            width: 144px;
+            padding: 10px;
+            margin: 10px;
+            background-color: #fff;
+            box-shadow: 2px 2px 1px #778284;
+        }
+
+        .color-bg {
+            background-color: #30BBBE;
+            border-radius: 14px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <div class="title-cen">
+            <div id="click-1" class="color-bg">密集型母线</div>
+            <div id="click-2">浇注型母线</div>
+        </div>
+    </div>
+    <div class="container" id="banner-1">
+        <div class="grid">
+            <div class="inf-img">
+                <img src="./imgs/block1.png">
+            </div>
+            <div class="inf-txt">西门子密集型母线介绍</div>
+        </div>
+        <div class="grid">
+            <div class="inf-img">
+                <img src="./imgs/block1.png">
+            </div>
+            <div class="inf-txt">西门子密集型母线介绍</div>
+        </div>
+    </div>
+
+    <div class="container" id="banner-2" style="display: none;">
+        <div class="grid">
+            <div class="inf-img">
+                <img src="./imgs/block1.png">
+            </div>
+            <div class="inf-txt">666</div>
+        </div>
+        <div class="grid">
+            <div class="inf-img">
+                <img src="./imgs/block1.png">
+            </div>
+            <div class="inf-txt">666</div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(".container").eq(0).show();
+        $(".title-cen div").click(function(){
+            //点击按钮增加样式
+            $(".title-cen div").removeClass("color-bg");
+            $(this).addClass("color-bg");
+
+            //对应内容显示
+            var num =$(".title-cen div").index(this);
+            // alert(num);
+            $(".container").hide();
+            $(".container").eq(num).show();
+        });
+
+        // $("#click-1").click(function(){
+        //     $("#banner-2").hide();
+        //     $("#banner-1").show();
+        //     $(this).addClass("color-bg");
+        //     $(this).css("color","#fff");
+        //     $("#click-2").removClass("color-bg");
+        // });
+        // $("#click-1").click(function(){
+        //     $("#banner-2").hide();
+        //     $("#banner-1").show();
+        //     $(this).addClass("color-bg");
+        //     $(this).css("color","#fff");
+        //     $("#click-2").removClass("color-bg");
+        // });
+    </script>
+
+</body>
+
+</html>

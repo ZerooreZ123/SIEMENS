@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="__CDN__/assets/css/frontend/index.css">
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="title"></div>
+<div class="container">
+    <div class="grid">
+        <div class="white"></div>
+        <div class="blue"><a href="{:url('company/dialog')}"><img src="__CDN__/assets/img/frontend/imgs/consult_1.png"></a></div>
+        <div class="white"><a href="{:url('certificate/index')}"><img src="__CDN__/assets/img/frontend/imgs/certification_1.png"></a></div>
+        <div class="blue"><a href="{:url('product/index')}"><img src="__CDN__/assets/img/frontend/imgs/presentation_1.png"></a></div>
+        <div></div>
+    </div>
+    <div class="grid">
+        <div></div>
+        <div></div>
+        <div class="blue"><a href="{:url('aftersale/index')}"><img src="__CDN__/assets/img/frontend/imgs/after-sale service_1.png"></a></div>
+        <div class="white"><a href="{:url('company/index')}"><img src="__CDN__/assets/img/frontend/imgs/company profile_1.png"></a></div>
+        <div class="blue"><a href="{:url('contact/index')}"><img src="__CDN__/assets/img/frontend/imgs/contact us_1.png"></a></div>
+    </div>
+    <div class="grid">
+        <div></div>
+        <div></div>
+        <div class="white"><a href="{:url('achievement/index')}"><img src="__CDN__/assets/img/frontend/imgs/performance_1.png"></a></div>
+        <div class="blue"><a href="{:url('presale/index')}"><img src="__CDN__/assets/img/frontend/imgs/pre-sale service_1.png"></a></div>
+        <div></div>
+    </div>
+</div>
+<script>
+    // 将试图分成10份计算rem, 配合vsc插件自动px2rem
+    var newSize = document.documentElement.getBoundingClientRect().width / 10;
+    document.documentElement.style.fontSize = newSize + 'px';
+
+    //使用touchmove,拒绝屏幕拖动
+    $(document).on('touchmove',function (e){
+        e.preventDefault();
+    });
+</script>
+</body>
+
+</html>

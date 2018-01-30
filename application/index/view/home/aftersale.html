@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>售后方案</title>
+  <style>
+    body {
+      background-color: #29b8c2;
+      overflow: hidden;
+    }
+
+    .title {
+      margin-top: 1.96rem;
+      height: 3.12rem;
+      background: url('./imgs/title.png') no-repeat left center;
+      background-size: auto 100%;
+    }
+
+    .container {
+      transform: rotate(-45deg);
+      width: 11rem;
+      position: absolute;
+      left: -0.88rem;
+      top: 8rem;
+    }
+
+    .grid {
+      overflow: hidden;
+    }
+
+    .grid > div {
+      float: left;
+      width: 1.8933rem;
+      height: 1.9067rem;
+      margin: 0.0933rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid > div.blue {
+      background: url('./imgs/block1.png') no-repeat center center;
+      background-size: 100% 100%; 
+    }
+
+    .grid > div.white {
+      background: url('./imgs/block0.png') no-repeat center center;
+      background-size: 100% 100%; 
+    }
+
+    .grid img {
+      height: 65%;
+      width: 65%;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="title"></div>
+  <div class="container">
+    <div class="grid">
+      <div class="white"></div>
+      <div class="blue"><img src="./imgs/consult.png" alt=""></div>
+      <div class="white"><img src="./imgs/certification.png" alt=""></div>
+      <div class="blue"><img src="./imgs/presentation.png" alt=""></div>
+      <div></div>
+    </div>
+    <div class="grid">
+      <div></div>
+      <div></div>
+      <div class="blue"><img src="./imgs/after-sale service.png" alt=""></div>
+      <div class="white"><img src="./imgs/company profile.png" alt=""></div>
+      <div class="blue"><img src="./imgs/contact us.png" alt=""></div>
+    </div>
+    <div class="grid">
+      <div></div>
+      <div></div>
+      <div class="white"><img src="./imgs/performance.png" alt=""></div>
+      <div class="blue"><img src="./imgs/pre-sale service.png" alt=""></div>
+      <div></div>
+    </div>
+  </div>
+  <script>
+    // 将试图分成10份计算rem, 配合vsc插件自动px2rem
+    var newSize = document.documentElement.getBoundingClientRect().width / 10;
+    document.documentElement.style.fontSize = newSize + 'px';
+  </script>
+</body>
+
+</html>

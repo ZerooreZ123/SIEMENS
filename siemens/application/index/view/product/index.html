@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>产品介绍列表页</title>
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="__CDN__/assets/js/frontend/flexible.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            text-decoration:none; 
+
+        }
+        .title {
+            padding: 0.306rem 0.573rem;
+        }
+
+        .title-cen {
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            flex-wrap: nowrap;
+            border: 1px solid #ccc;
+            border-radius: 0.666rem;
+            font-size:0.4rem;
+            background-color: #F8F6F7;
+            color: #C6C4C5;
+        }
+
+
+        .title-cen div {
+            display: inline-block;
+            width: 50%;
+            padding: 0.213rem 0;
+            text-align: center;
+        }
+
+        .container {
+            display:flex;
+            justify-content:space-around;
+            align-items: center;
+            flex-wrap: nowrap;
+            background: #eee;
+        }
+
+        .grid {
+            display: inline-block;
+            width: 4.46rem;
+            height:4.46rem;
+            padding: 0.133rem;
+            margin: 0.133rem;
+            background-color: #fff;
+            box-shadow: 1px 2px 1px #778284;
+            color: #000000;
+        }
+        .grid .inf-img{
+            width:4.266rem;
+            height:3.706rem;
+        }
+        .grid .inf-img>img{
+            width:100%;
+            height:100%;
+        }
+        .grid .inf-txt{
+            width:4.266rem;
+            height:0.746rem;
+            line-height: 0.746rem;
+            text-align: center;
+            font-size: 0.24rem;
+        }
+        .color-bg {
+            background-color: #30BBBE;
+            border-radius:0.666rem;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+<div class="title">
+    <div class="title-cen">
+        <div class="box">
+            {foreach name="pmodel" item="vo"}
+            <div id="click-1" class="color-bg">{$vo.name}</div>
+            <div class="container" id="banner-1">
+                <a href="">
+                    <div class="grid">
+                        <div class="inf-img">
+                            <img width="120" src="">
+                        </div>
+                        <div class="inf-txt">test</div>
+                    </div>
+                </a>
+            </div>
+            {/foreach}
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(".container").eq(0).show();
+    $(".title-cen div").click(function(){
+        //点击按钮增加样式
+        $(".title-cen div").removeClass("color-bg");
+        $(this).addClass("color-bg");
+
+        //对应内容显示
+        var num =$(".title-cen div").index(this);
+        // alert(num);
+        $(".container").hide();
+        $(".container").eq(num).show();
+    });
+
+    // $("#click-1").click(function(){
+    //     $("#banner-2").hide();
+    //     $("#banner-1").show();
+    //     $(this).addClass("color-bg");
+    //     $(this).css("color","#fff");
+    //     $("#click-2").removClass("color-bg");
+    // });
+    // $("#click-1").click(function(){
+    //     $("#banner-2").hide();
+    //     $("#banner-1").show();
+    //     $(this).addClass("color-bg");
+    //     $(this).css("color","#fff");
+    //     $("#click-2").removClass("color-bg");
+    // });
+</script>
+
+</body>
+
+</html>

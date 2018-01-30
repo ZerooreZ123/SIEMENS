@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer" />
+    <title>消息推送</title>
+    <link rel="stylesheet" type="text/css" href="__CDN__/assets/css/frontend/reset.css">
+    <link rel="stylesheet" type="text/css" href="__CDN__/assets/css/frontend/upload.css">
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="__CDN__/assets/js/frontend/flexible.js"></script>
+    <script src="__CDN__/assets/js/html5shiv.js"></script>
+    <script src="__CDN__/assets/js/respond.min.js"></script>
+    <script type="text/javascript">
+        var require = {
+            config:  {$config|json_encode}
+        };
+    </script>
+    <script src="__CDN__/assets/js/require.js" data-main="__CDN__/assets/js/require-frontend{$Think.config.app_debug?'':'.min'}.js?v={$site.version}"></script>
+</head>
+<body>
+<form action="{:url('Release/release')}" method="post">
+    <input type="hidden" name="image" id="image">
+    <textarea name="content" id="content" style="display: none;"></textarea>
+    <div class="wrapper">
+        <div class="wrapper_header">
+            <div class="header_input">
+                <input type="text" name="title" id="input_kuai" maxlength="25" placeholder="请输入推送消息标题" style="outline: none;">
+                <div class="icon1_box">
+                    <input type="file" id="icon1" class="icon1_input fr" multiple="multiple">
+                    <img src="__CDN__/assets/img/frontend/icon/icon3.png" class="icon1 fr">
+                </div>
+            </div>
+            <!--<div class="type_box">
+                <span>型号:</span>
+                <select name="pmodel_id" class="selectdeleted">
+                    <option value="">请选择询价型号</option>
+                    {foreach name="pmodel" item="vo"}
+                    <option value="{$vo.id}">{$vo.name}</option>
+                    {/foreach}
+                </select>
+            </div>-->
+        </div>
+        <div class="wrapper_content">
+            <div class="content">
+                <div class="content_box"></div>
+            </div>
+        </div>
+        <div class="input_box" >
+            <div class="input_content">
+                <textarea class="input_textare" placeholder="请输入内容" style="outline: none;"></textarea>
+                <div class="icon_box">
+                    <input type="file" id="icon" class="icon_input fr" multiple="multiple">
+                    <img src="__CDN__/assets/img/frontend/icon/icon3.png" class="icon fr">
+                </div>
+                <button class="button">发布</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    $(function(){
+        // 固定底部
+        getHight();
+
+        //预览图片
+        $("#icon").change(function(){
+            //ajax上传并返回文件保存路径
+            var pic = ajaxFileUpload(this.files[0]);
+//            console.log(pic);
+
+            // AJAX异步上传消息内容图片，成功则实现编辑内容预览
+            $.ajax({
+                url: '{:url("Release/uploadArticleImage")}',
+                data: {
+                    path:pic
+                },
+                type: "POST",
+                success:function(res){
+                    //预览编辑内容
+                    var $textarea_text = $('.input_textare').val();
+                    var p = $('<p class="second_p">' + $textarea_text + '</p>');
+                    var img_box = $('<div class="img_box">' +
+                        '<img src="' + res + '" class="img_src"/>' +
+                        '</div>');
+                    $('.content_box').append(p);
+                    $('.content_box').append(img_box);
+                    $('.input_textare').val('');
+                    getHight();
+
+                    var content = $('.content_box').html();
+
+                    var HtmlUtil = {
+                        htmlEncode: function (html) {
+                            //1.首先动态创建一个容器标签元素，如DIV
+                            var temp = document.createElement("div");
+                            //2.然后将要转换的字符串设置为这个元素的innerText(ie支持)或者textContent(火狐，google支持)
+                            (temp.textContent != undefined ) ? (temp.textContent = html) : (temp.innerText = html);
+                            //3.最后返回这个元素的innerHTML，即得到经过HTML编码转换的字符串了
+                            var output = temp.innerHTML;
+                            temp = null;
+                            return output;
+                        }
+                    };
+
+                    var encodecontent = HtmlUtil.htmlEncode(content);
+                    $("#content").html(content);
+                },
+                error:function(XMLHttpRequest, textStatus, errorThrown){
+                    return null;
+                }
+            });
+        });
+
+        $("#icon1").change(function(){
+            var objUrl = ajaxFileUpload(this.files[0]);
+
+            $("#image").val(objUrl);
+        });
+
+        function getHight(){
+            var $window = $(window).height();
+            var $wrapper = $('.wrapper').height();
+            if($window > $wrapper) {
+                $('.input_box').addClass('fixed_footer');
+            }else{
+                $('.input_box').removeClass('fixed_footer');
+            }
+        }
+
+        // AJAX异步上传消息缩略图
+        function ajaxFileUpload(file) {
+            //创建FormData对象
+            var data = new FormData();
+            //为FormData对象添加数据
+            data.append("file", file);
+            $.each(Config.upload.multipart, function(k, v) {
+                data.append(k, v);
+            });
+
+            //发送数据
+            var resdata = null;
+            $.ajax({
+                async:false,
+                url:'{:url("ajax/upload")}',
+                data:data,
+                cache: false,
+                contentType: false,
+                processData: false,
+                type:'POST',
+                success:function(res){
+                    resdata = res.data.url;
+                },
+                error:function(e){
+                    alert('上传出错');
+                }
+            });
+
+            return resdata;
+        }
+    })
+</script>
+</body>
+</html>

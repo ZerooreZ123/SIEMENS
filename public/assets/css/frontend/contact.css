@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 12px;
+}
+
+.container {
+    padding: 10px;
+}
+
+.grid {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.title {
+    height: 20px;
+    padding: 10px;
+    line-height: 20px;
+    color: #fff;
+    background-color: #29b8c2;
+}
+
+.title > span {
+    float: right;
+    width: 20px;
+    height: 20px;
+    background: url('../../img/frontend/imgs/more_1.png') no-repeat center center;
+    background-size: 60% 60%;
+}
+
+.info {
+    /*height: 120px;*/
+    padding: 0 10px;
+    background-color: #C0FDFE;
+    display: none;
+}
+
+.info_desc {
+    height: 40px;
+    padding: 10px 0;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.info_desc:last-child {
+    border-bottom: none;
+}
+
+.info_img {
+    float: left;
+    width: 20%;
+    height: 40px;
+}
+
+.info_img > img {
+    width: 40px;
+    height: 40px;
+}
+
+.info_text {
+    float: right;
+    width: 80%;
+    height: 40px;
+}

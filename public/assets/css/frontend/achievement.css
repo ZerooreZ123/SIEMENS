@@ -1,0 +1,55 @@
+body{
+    font-family:"宋体",-apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+}
+.wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background:#fff;
+}
+.wrapper .wrapper_container{
+    margin:0 0.266rem;
+}
+.wrapper_container .main_banner{
+    margin-top:0.253rem;
+    height:4.693rem;
+    width:9.466rem;
+    margin-bottom:0.133rem;
+}
+.wrapper_container .main_banner>img{
+    width:100%;
+    height:100%;
+}
+.achievement_list{
+    margin-bottom:1.33rem;
+}
+.achievement_list .achievement_single{
+    position:relative;
+    box-sizing:border-box;
+    display:inline-block;
+    width:2.70rem;
+    height:2.70rem;
+    padding:10px 12px;
+    margin:0 10px;
+    color:#323232;
+}
+.text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    font-size:0.373rem;
+    color:#fff;
+    transform: translate(-50%,-50%)
+}
+.achievement_list>a{
+    text-decoration: none;
+}
+.achievement_single .img_box{
+    width:100%;
+    height:100%;
+}
+.achievement_single .img_box>img{
+    width:100%;
+    height:100%;
+}
+

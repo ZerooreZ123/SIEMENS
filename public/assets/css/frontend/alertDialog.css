@@ -1,0 +1,83 @@
+body{
+    width:100%;
+    height:100%;
+    font-family:"宋体",-apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+}
+.dialog{
+    width:10rem;
+    overflow: hidden;
+    background:#fff;
+}
+.dialog .title{
+    width: 100%;
+    height:2rem;
+    font-size:0.533rem;
+    text-align: center;
+    line-height: 2rem;
+    color:#fff;
+    background:#30bbbe;
+}
+.dialog .form_box{
+    margin: 0 0.333rem;
+}
+.inputs .designation_box,.inputs .name_box,.inputs .phone_box,.inputs .type_box{
+    height:2rem;
+    width:100%;
+    border-bottom:1px solid #999;
+    line-height:2rem;
+    text-indent:0.293rem;
+}
+input::-webkit-input-placeholder { 
+    color:#e9e8e8;
+}
+input:-moz-placeholder {
+    color:#e9e8e8;
+}
+input:-ms-input-placeholder { 
+    color:#e9e8e8;  
+}
+.inputs input{
+    width:6rem;
+    padding-left:0.186rem;
+    font-size:0.4rem;
+    color:rgba(0, 0, 0, 0.74);
+}
+.designation_box>label,.name_box>label,.phone_box label,.type_box span{
+    font-size:0.4rem;
+    color:rgba(0, 0, 0, 0.74);
+}
+.type_box .selectdeleted{
+    width:5.6rem;
+    height:0.773rem;
+    text-indent:0.373rem;
+    font-size:0.32rem;
+    border: medium none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color:#565656;
+    background:#e9e8e8 url(../../img/frontend/icon/icon_triangle.png) 4.8rem center no-repeat;
+}
+.selectdeleted option{
+    width:4.586rem;
+    height:0.773rem;
+    font-size:0.16rem;
+}
+.form_box .button_box{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.form_box .button_box .button{
+    width:6.866rem;
+    height:0.933rem;
+    margin:2rem 0.133rem 2rem;
+    border:0;
+    border-radius:8px;
+    font-size:0.48rem;
+    text-align: center;
+    line-height: 0.933rem;
+    overflow: hidden;
+    color:#fff;
+    background: #30bbbe;
+}

@@ -1,0 +1,28 @@
+body{
+    font-family:"宋体",-apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+}
+.wrapper{
+    width:100%;
+    height:100%;
+    background:#fff;
+}
+.wrapper .wrapper_content{
+    margin:0 0.266rem;
+    padding-bottom:0.72rem;
+}
+.wrapper_content .content{
+    margin-top:0.266rem;
+    max-width:9.466rem !important;
+}
+.content img{
+    max-width:9.466rem !important;
+    margin:0.266rem 0 0.4rem;
+}
+.content p{
+    max-width:9.466rem !important;
+    margin-top:0.373rem;
+    line-height:0.64rem;
+    font-size:0.346rem;
+    color:#000;
+    
+}

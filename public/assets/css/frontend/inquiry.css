@@ -1,0 +1,300 @@
+body{
+    font-family:"宋体",-apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+}
+.wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.wrapper .wrapper_container{
+    z-index: 99;
+    line-height:0.48rem !important;
+    font-size:0.32rem !important;
+    margin-bottom:2rem !important;
+}
+.content_H{
+    max-width: 10rem !important;
+    margin-bottom:0.4rem !important;
+}
+.content_H .p_all{
+    margin:0 0.266rem;
+    max-width:9.466rem;
+}
+.wrapper .wrapper_container h2{
+    font-size:0.32rem;
+    line-height:0.48rem;
+    font-weight:700;
+}
+.wrapper .wrapper_container span{
+    display:block;
+    text-align:center;
+}
+.content_H .subtitle{
+    height: 0.853rem;
+    line-height: 0.853rem;
+    text-align: center;
+    font-size:0.4rem;
+    color:#fff;
+    background: #30bbbe;
+}
+.content_H .box{
+    max-width: 10rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:0.266rem;
+}
+.content_H img{
+    display:inline-block;
+    max-width: 10rem !important;
+}
+.content_M{
+    margin:0 0.266rem;
+}
+.content_M p,.content_M img{
+    display: inline-block !important;
+    max-width: 10rem !important;
+}
+.content_M p{
+    line-height:0.48rem !important;
+    /*font-size:0.32rem !important;*/
+    margin: 0.266rem 0 !important;
+    text-indent: 0.733rem !important;
+}
+.img_box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.content_main .part_1{
+    margin-bottom: 0.373rem;
+}
+.part_1 .part_1_content p,.part_2 .part_2_content p{
+    margin:0 0.266rem;
+    max-width: 9.466rem;
+}
+.part_1>img,.part_2>img{
+    display:inline-block;
+    height:0.84rem;
+    margin-bottom:0.4rem;
+}
+.part_1>img{
+    width:4rem;
+}
+.part_2>img{
+    width:4.453rem;
+}
+.part_3>img{
+    display:inline-block;
+    max-width:3.466rem !important;
+    height:0.84rem !important;
+}
+.content_main .part_2{
+    margin-bottom:0.573rem;
+}
+.content_main .part_3{
+    margin-bottom:0.673rem;
+}
+.content_main .part_3 .number_3{
+    margin-bottom:0.453rem;
+}
+.content_main .part_3 .pro_2{
+    display:block;
+    width:100%;
+    height:4.266rem;
+}
+.content_main .part_3 .explain_3_1{
+    margin:0.213rem 0 0.733rem
+}
+.content_main .part_3 .pro_3{
+    display:block;
+    width:10rem !important;
+    height:4.266rem;
+    margin-top:0.346rem;
+}
+.content_main .part_3 .explain_3_2{
+    margin:0.346rem 0;
+}
+.part_3 .part_3_content p{
+    margin:0 0.266rem;
+    max-width: 9.466rem;
+}
+.content_main .part_4,.content_main .part_5{
+    margin-bottom:0.373rem;
+}
+.content_main .part_4 .number_4,.content_main .part_5 .number_5{
+    margin-bottom:0.293rem;
+}
+.part_4 .part_4_content p,.part_5 .part_5_content p{
+    margin:0 0.266rem;
+    max-width: 9.466rem;
+}
+.part_4_content .box_1,.part_5_content .box_2{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.part_4_content .pro_4,.part_5_content .pro_5{
+    width:7.186rem !important;
+    height:4.055rem !important;
+    margin-top:0.533rem;
+}
+.pro_4>img,.pro_5>img{
+    width:100%;
+    height:100%;
+}
+.part_4_content .explain_4{
+    margin:0.346rem 0 0.44rem;
+}
+.part_5_content .explain_5{
+    margin:0.346rem 0 0.746rem;
+}
+.part_4>img,.part_5>img{
+    display:inline-block;
+    height:0.84rem;
+}
+.part_4>img{
+    width:7.333rem;
+}
+.part_5>img{
+    width:6.933rem;
+}
+.fixed_footer{
+    position:fixed;
+    left:0;
+    bottom:0;
+}
+.wrapper_footer{
+   z-index: 100;
+   display:flex;
+   align-content: center;
+   justify-content: center;
+   width:100%;
+   height:1.266rem;
+   margin-top: -1.266rem;
+   background:rgba(62, 191, 194, 0.4);
+}
+.wrapper_footer .inquiry{
+    width:1.973rem;
+    height:1.8rem;
+    margin:-1.06rem auto 0;
+    border-radius:50%;
+}
+.inquiry>img{
+    width:100%;
+    height:100%;
+}
+.wrapper_footer .border-dashede{
+    z-index: 120;
+    position: relative;
+    width: 100%;
+    height:0.12rem;
+    border-top: 1px dashed #70cdcf
+}
+
+/* 弹窗 */
+.mask{
+    z-index:1000;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.3);
+}
+.dialog{
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:7.773rem;
+    height:9.943rem;
+    overflow: hidden;
+    border-radius:8px;
+    background:#fff;
+}
+.dialog .title{
+    width: 100%;
+    height:1.266rem;
+    font-size:0.533rem;
+    text-align: center;
+    line-height: 1.266rem;
+    color:#fff;
+    background:#30bbbe;
+}
+.dialog .form_box{
+    margin: 0 0.333rem;
+}
+.inputs .designation_box,.inputs .name_box,.inputs .phone_box,.inputs .type_box{
+    height:1.28rem;
+    width:100%;
+    border-bottom:1px solid #eee;
+    line-height:1.28rem;
+    text-indent:0.293rem;
+}
+input::-webkit-input-placeholder { 
+    color:#e9e8e8;
+}
+input:-moz-placeholder {
+    color:#e9e8e8;
+}
+input::-moz-placeholder {
+    color:#e9e8e8;
+}  
+input:-ms-input-placeholder { 
+    color:#e9e8e8;  
+}
+.inputs input{
+    padding-left:0.186rem;
+    font-size:0.4rem;
+    color:rgba(0, 0, 0, 0.74);
+}
+.designation_box label,.name_box label,.phone_box label,.type_box span:first-child{
+    font-size:0.4rem;
+    color:rgba(0, 0, 0, 0.74);
+}
+.inputs .type_box .selectdeleted{
+    width:4.586rem;
+    height:0.773rem;
+    text-indent:0.373rem;
+    font-size:0.32rem;
+    border: medium none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color:#565656;
+    background:#e9e8e8 url(../../img/frontend/icon/icon_triangle.png) 4.04rem center no-repeat;
+}
+.selectdeleted option{
+    -moz-appearance:none; 
+    -webkit-appearance:none;
+    appearance:none;
+    width:4.586rem;
+    height:0.773rem;
+    font-size:0.16rem;
+}
+.form_box .button_box{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.form_box .button_box .button{
+    width:6.866rem;
+    height:0.933rem;
+    margin:1.52rem 0.133rem 0.573rem;
+    border:0;
+    border-radius:8px;
+    font-size:0.48rem;
+    text-align: center;
+    line-height: 0.933rem;
+    overflow: hidden;
+    color:#fff;
+    background: #30bbbe;
+}
+.background_lock{
+    height: 100%;
+    overflow: hidden;
+}
+.background_loose{
+    overflow: auto;
+}

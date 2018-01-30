@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我要咨询</title>
+    <link rel="stylesheet" href="__CDN__/assets/css/frontend/reset.css">
+    <link rel="stylesheet" href="__CDN__/assets/css/frontend/alertDialog.css">
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="__CDN__/assets/js/frontend/flexible.js"></script>
+</head>
+<body>
+    <form class="dialog" action="{:url('Inquiry/inquiry')}" method="post">
+        <div class="title">填写信息</div>
+        <div class="form_box">
+            <div class="inputs">
+                <div class="designation_box">
+                    <label for="designation">名&nbsp称:</label>
+                    <input type="text" name="title" placeholder="请填写产品名称" id="designation" value="{$inf['title']}">
+                </div>
+                <div class="name_box">
+                    <label for="name">姓&nbsp名:</label>
+                    <input type="text" name="username" placeholder="请填写您的姓名" id="name">
+                </div>
+                <div class="phone_box">
+                    <label for="phoneNum">手机号:</label>
+                    <input type="text" name="phone" placeholder="请填写正确手机号码" id="phoneNum">
+                </div>
+                <div class="type_box">
+                    <span>询价型号:</span>
+                    <select name="Model" class="selectdeleted">
+                        <option value="">请选择询价型号</option>
+                        {foreach name="pmodel" item="vo"}
+                        {if condition="$vo['id'] eq $inf['pmodel_id']"}
+                        <option selected value="{$vo.name}">{$vo.name}</option>
+                        {else /}
+                        <option value="{$vo.name}">{$vo.name}</option>
+                        {/if}
+                        {/foreach}
+                    </select>
+                </div>
+            </div>
+            <div class="button_box">
+                <button class="button" onclick="return check(this.form)">提交</button>
+            </div>
+        </div>
+    </form>
+    <script>
+        function check(form) {
+            if(!(/^1[34578]\d{9}$/.test(form.phone.value))){
+                alert("手机号码格式不正确!");
+                form.phone.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

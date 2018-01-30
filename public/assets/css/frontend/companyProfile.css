@@ -1,0 +1,208 @@
+body{
+    font-family:"宋体",-apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+}
+.wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background:#fff;
+}
+.wrapper .wrapper_container{
+    padding-bottom:2.773rem;
+}
+.wrapper_container .tab_switch{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items:center;
+    width:100%;
+    border-bottom:1px solid #30bbbe;
+}
+.tab_switch .switch{
+    margin:0.306rem 1.866rem 0 1.426rem;
+    padding-bottom:0.173rem;
+    text-align: center;
+    font-size:0.4rem;
+}
+ .switch_1{
+    border-bottom:4px solid #30bbbe;
+    color:#30bbbe;
+}
+.container_1 .content{
+    margin: 0 0.266rem;
+}
+.wrapper_container .content .title{
+    margin:0.36rem 0 0.266rem;
+    font-size:0.48rem;
+    text-indent:0.24rem;
+    color:#333;
+}
+.wrapper_container .content .banner{
+    width:100%;
+    height:4.826rem;
+}
+.content .banner img{
+    width:100%;
+    height:100%;
+}
+.wrapper_container .content .frame{
+    position:relative;
+    width:9.466rem;
+    padding: 0 0.426rem;
+    margin-top:0.573rem;
+    border:1px solid #e11c3d;
+    border-radius:8px;
+}
+.content .frame img{
+    position:absolute;
+    top:-0.48rem;
+    left:0.4rem;
+    width:1.2rem;
+    height:1.2rem;
+}
+.frame .frame_content{
+    text-indent:1.506rem;
+    line-height:0.48rem;
+    font-size:0.266rem;
+    margin-top:0.213rem; 
+    margin-bottom:0.213rem;
+}
+.wrapper_container .progressBar_box{
+    margin:0 0.266rem;
+
+}
+.progressBar_box .progressBar{
+    position:relative;
+    margin:0 0.16rem 0 1.92rem;
+}
+.progressBar::after{
+    content: '';
+    width: 2px;
+    display: block;
+    position: absolute;
+    top: -1.2rem;
+    bottom:-1.933rem;
+    background: #69bdbe;
+}
+.progressBar::before{
+    content: "";
+    width: 0.6rem;
+    height: 0.6rem;
+    background: url(../../img/frontend/icon/icon1.png) center center no-repeat;
+    position: absolute;
+    left: -0.3rem;
+    top: -1.76rem;
+    z-index: 2;
+    border-radius: 50%;
+}
+.progressBar_box .progressBar .single{
+    width:7.413rem;
+    height:2.8rem;
+    margin-top:1.2rem;
+}
+.progressBar_box .progressBar .single_photo{
+    position: relative;
+    margin-top:2.52rem;
+}
+.single_content>img,.single_title>img{
+    width:100%;
+    height:100%;
+}
+.single .single_container{
+    float:right;
+    position:relative;
+    z-index:90;
+    width:4.613rem;
+    height:2.8rem;
+}
+.single .single_container .single_content{
+    height:2.266rem;
+    width:100%;
+    background: #bfbfbf;
+}
+.single .single_container .single_content::after{
+    content: "";
+    width: 0.6rem;
+    height: 0.6rem;
+    background:url(../../img/frontend/icon/icon2.png) center center no-repeat;
+    position: absolute;
+    left: -3.10rem;
+    top: 1.333rem;
+    z-index: 2;
+    border-radius:50%;
+}
+.single .single_container .single_title{
+    height:0.533rem;
+    width:100%;
+    background:#69bdbe;
+    color: #fff;
+    line-height: 0.533rem;
+    font-size: 0.32rem;
+    text-indent: 0.266rem;
+}
+.single .single_container .single_title::after{
+    content: '';
+    width: 2px;
+    display: block;
+    position: absolute;
+    top: 3.78rem;
+    bottom: -4rem;
+    background: #69bdbe;
+    transform: rotate(90deg) translate(-3.65rem,1.52rem);
+    -webkit-transform:rotate(90deg) translate(-3.65rem,1.52rem);
+    -moz-transform:rotate(90deg) translate(-3.65rem,1.52rem);
+}
+.container_box .container_2{
+    display:none;
+    margin:0 0.266rem;
+}
+.container_2 .module{
+    position:relative;
+    width:9.466rem;
+    padding:0 0.426rem;
+    margin:0.6rem 0 0.44rem;
+    border:1px solid #e11c3d;
+    border-radius:8px;
+}
+.container_2 .module .module_content{
+   text-indent:1.506rem;
+   line-height:0.48rem;
+   font-size:0.266rem;
+   margin-top:0.213rem; 
+}
+.container_2 .module .module_box{
+    position:absolute;
+    top:-0.48rem;
+    left:0.4rem;
+    width:1.2rem;
+    height:1.2rem;
+}
+.module_box>img{
+    width:100%;
+    height:100%;
+}
+.container_2 .imgCase_1{
+    width:9.466rem;
+    height:4.84rem;
+}
+.imgCase_1>img{
+    width:100%;
+    height:100%;
+}
+.container_2 .imgCase_2{
+    margin:0.946rem 0 0.773rem;
+}
+.imgCase_2 .title{
+    margin-bottom:0.4rem;
+    font-size:0.426rem;
+    color:#30bbbe;
+}
+.imgCase_2 .img_box{
+    width:9.466rem;
+    height: 4.826rem;
+}
+.imgCase_2 .img_box>img{
+    width:100%;
+    height:100%;
+}

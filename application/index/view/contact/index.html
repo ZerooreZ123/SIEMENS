@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>联系我们</title>
+    <link rel="stylesheet" href="__CDN__/assets/css/frontend/contact.css">
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script>
+        //引入微信jssdk
+        wx.config({$js->config(array('getLocation', 'openLocation'), false)});
+    </script>
+</head>
+<body>
+<div class="container">
+    {foreach name="list" item="vo" key="k"}
+        {if condition="$k eq 0"}
+        <div class="grid">
+            <div class="title">{$vo.title}<span></span></div>
+            <div class="info" style="display: block">
+                <div class="info_desc">
+                    <div class="info_img">
+                        <img src="__CDN__/assets/img/frontend/imgs/add.png">
+                    </div>
+                    <div class="info_text">
+                        <p>地址：</p>
+                        <p class="adr"><a href="javascript:;">{$vo.address}</a></p>
+                    </div>
+                </div>
+                <div class="info_desc">
+                    <div class="info_img">
+                        <img src="__CDN__/assets/img/frontend/imgs/tel.png">
+                    </div>
+                    <div class="info_text">
+                        <p>电话：</p>
+                        <p><a href="tel:{$vo.phone}">{$vo.phone}</a></p>
+                    </div>
+                </div>
+                <div class="info_desc">
+                    <div class="info_img">
+                        <img src="__CDN__/assets/img/frontend/imgs/email.png">
+                    </div>
+                    <div class="info_text">
+                        <p>邮箱：</p>
+                        <p>{$vo.email}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {else /}
+        <div class="grid">
+            <div class="title">{$vo.title}<span></span></div>
+            <div class="info">
+                <div class="info_desc">
+                    <div class="info_img">
+                        <img src="__CDN__/assets/img/frontend/imgs/add.png">
+                    </div>
+                    <div class="info_text">
+                        <p>地址：</p>
+                        <p class="adr"><a href="javascript:;">{$vo.address}</a></p>
+                    </div>
+                </div>
+                <div class="info_desc">
+                    <div class="info_img">
+                        <img src="__CDN__/assets/img/frontend/imgs/tel.png">
+                    </div>
+                    <div class="info_text">
+                        <p>电话：</p>
+                        <p><a href="tel:{$vo.phone}">{$vo.phone}</a></p>
+                    </div>
+                </div>
+                <div class="info_desc">
+                    <div class="info_img">
+                        <img src="__CDN__/assets/img/frontend/imgs/email.png">
+                    </div>
+                    <div class="info_text">
+                        <p>邮箱：</p>
+                        <p>{$vo.email}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {/if}
+    {/foreach}
+</div>
+<script>
+    $(".title").click(function(){
+        $(this).siblings().toggle();
+    });
+    //点击显示改地址的地图坐标
+    $(".adr").click(function () {
+        var name = $(this).parents('.info').siblings('.title').text();
+        var address = $(this).text();
+        $.ajax({
+            url: "{:url('Contact/getLocation')}",
+            type: "POST",
+            data: { address: address},
+            success: function(data){
+                var res = eval("("+data+")");
+                //使用微信内置地图查看位置接口
+                wx.openLocation({
+                    latitude : res.result.location.lat, // 纬度，浮点数，范围为90 ~ -90
+                    longitude : res.result.location.lng, // 经度，浮点数，范围为180 ~ -180。
+                    name : name, // 位置名
+                    address : address, // 地址详情说明
+                    scale : 28, // 地图缩放级别,整形值,范围从1~28。默认为最大
+                    infoUrl : '' // 在查看位置界面底部显示的超链接,可点击跳转
+                });
+
+            }
+        });
+    });
+</script>
+</body>
+</html>

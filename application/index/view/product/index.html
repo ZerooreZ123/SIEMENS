@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品介绍</title>
+    <link rel="stylesheet" href="__CDN__/assets/css/frontend/product.css">
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/masonry/4.2.0/masonry.pkgd.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js"></script>
+    <script src="__CDN__/assets/js/frontend/flexible.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="title">
+        <span>种类</span>
+        <span>系统种类</span>
+    </div>
+    <div class="header">
+        <div class="tabBox">
+            {foreach name="pmodel" item="vo"}
+            <div class="tab">{$vo.name}</div>
+            {/foreach}
+        </div>
+    </div>    
+    <div class="container">
+        {foreach name="product" item="vo"}
+        <div class="content grid" style="display:none;">
+            {foreach name="vo" item="v"}
+            <a href="{:url('Inquiry/index',['id'=>$v['id']])}" class="grid-item">
+                <div class="box">
+                    <div class="inf-img">
+                        <img width="120" src="__CDN__{$v.image}">
+                    </div>
+                    <div class="inf-txt">{$v.title}</div>
+                </div>
+            </a>
+            {/foreach}
+        </div>
+        {/foreach}
+    </div>
+</div>
+<script>
+    //默认tab栏目
+    $(".tab").eq(0).addClass('color-bg');
+
+    //dom文档树加载完和所有文件加载完
+    window.onload=function() {
+
+        //默认显示栏目内容
+        $(".content").eq(0).show();
+
+        //初始化Masonry
+        var $grid = $('.grid').masonry({
+            // options
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-item'
+        });
+
+        //tab栏点击 切换栏目内容
+        $(".tab").on('click',function(){
+            //清楚tab栏样式，被点击tab按钮增加样式
+            $(".tab").removeClass("color-bg");
+            $(this).addClass("color-bg");
+
+            //栏目内容隐藏，对应栏目内容显示
+            var num =$(" .tab").index(this);
+            $(".content").hide();
+            $(".content").eq(num).show();
+
+            //Masonry图片懒加载
+            $grid.imagesLoaded().progress( function() {
+                $grid.masonry('layout');
+            });
+        });
+    }
+</script>
+</body>
+</html>

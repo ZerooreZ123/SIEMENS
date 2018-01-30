@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>资质证书</title>
+    <link rel="stylesheet" href="__CDN__/assets/css/frontend/certificate.css">
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="__CDN__/assets/js/frontend/flexible.js"></script>
+</head>
+<body>
+<div class="container">
+    {foreach name="list" item="vo"}
+    <div class="grid">
+        <div class="grid_text">{$vo.title}</div>
+        <div class="grid_img">
+            {volist name="vo.images" id="v" length="2"}
+            <div class="img_box" >
+                <a href="__CDN__{$v}"><img src="__CDN__{$v}" class='img_photo'></a>
+            </div>
+            {/volist}
+        </div>
+    </div>
+    {/foreach}
+</div>
+</body>
+</html>
