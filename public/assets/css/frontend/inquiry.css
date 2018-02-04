@@ -61,6 +61,32 @@ body{
     margin: 0.266rem 0 !important;
     text-indent: 0.733rem !important;
 }
+.imgShow{
+    margin:0.4rem 0.093rem 1.6rem ;
+}
+.imgBox{
+    position: relative;
+    float:left;
+    width:2.6rem;
+    height:1.786rem;
+    margin:0.133rem 0.32rem;
+}
+.imgBox>img{
+    width:100% !important;
+    height:100%;
+}
+.textShow{
+    position:absolute;
+    left:0;
+    bottom: 0;
+    height:0.533rem;
+    width:100%;
+    text-align: center;
+    line-height: 0.533rem;
+    font-size: 0.266rem;
+    color:#fff;
+    background: rgba(0, 0, 0, 0.3)
+}
 .img_box{
     display:flex;
     justify-content: center;

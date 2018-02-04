@@ -18,6 +18,11 @@
         <div class="container_box">
             <div class="container_1">
                 <div class="content">
+                    <div class='video'>  
+                       <video width="100%" height="100%" src="http://www.youname.com/images/first.png" 
+                       autoplay="autoplay" preload="none" controls="controls">
+                      </video>
+                    </div>
                     <div class="title">西门子股份公司</div>
                     <div class="banner"><img src="__CDN__/assets/img/frontend/advert/main_banner2.jpg"></div>
                     <div class="frame">
@@ -35,8 +40,11 @@
                         <li class="single">
                             <a href="{:url('company/details',['id'=>$vo.id])}">
                                 <div class="single_container">
-                                    <div class="single_content"><img src="__CDN__{$vo.image}"></div>
                                     <div class="single_title">{$vo.title}</div>
+                                    <div class="single_content">
+                                        <img src="__CDN__{$vo.image}">
+                                        <div class='year'>2014年</div>
+                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -52,10 +60,10 @@
                     <div class="module_box"><img src="__CDN__/assets/img/frontend/advert/quotes.png"></div>
                 </div>
                 <div class="imgCase_1"><img src="__CDN__/assets/img/frontend/advert/scale_1.jpg"></div>
-                <div class="imgCase_2">
+                <!-- <div class="imgCase_2">
                     <div class="title">西门子股份公司</div>
                     <div class="img_box"><img src="__CDN__/assets/img/frontend/advert/scale_2.jpg"></div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

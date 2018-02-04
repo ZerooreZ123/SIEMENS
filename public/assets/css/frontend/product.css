@@ -12,10 +12,12 @@ a{
     height:100%;
 }
 .title{
+    position:fixed;
+    z-index:10;
     width:100%;
     height:0.8rem;
     line-height: 0.8rem;
-    font-size:18px;
+    font-size:0.24rem;
     color:#fff;
     background:#30bbbe;
 }
@@ -31,32 +33,40 @@ a{
     text-indent:0.346rem;
 }
 .wrapper .header{
+    position:fixed;
+    top:0.8rem;
+    left:0;
     width:27%;
-    height:1.466rem;
-    background: #fff;
+    height: 100%;
+    color:#fff;
+    background: #30bbbe;
 
 }
-.header .tabBox{
-    
-}
 .tabBox .tab{
-    width:50%;
-    height:0.8rem;
+    width:100.7%;
+    height:2.4rem;
     text-align: center;
-    line-height: 0.8rem;
-    font-size: 0.426rem;
+    line-height: 2.4rem;
+    font-size: 0.267rem;
+    border-bottom: 1px solid #fff;
+}
+.container{
+    position: absolute;
+    left: 27%;
+    top: 0.8rem;
 }
 .content a{
     display: inline-block;
-    width: 4.666rem;
+    width: 6.69rem;
     text-decoration: none;
     box-shadow: 2px 3px 1px #9da5a7;
-    margin: 0.306rem 0.133rem 0;
+    margin: 0.32rem 0.32rem 0;
 }
 .box {
-    padding-top: 0.266rem;
+    padding-top: 0.133rem;
     background-color: #fff;
     color: #000000;
+    background:#f8f8f8;
 }
 .box .inf-img{
     display: flex;
@@ -65,19 +75,51 @@ a{
 }
 .box .inf-img>img{
     display: inline-block;
-    width: 4.26rem !important;
+    width: 6.18rem !important;
 }
 .box .inf-txt{
-    height:0.746rem;
-    line-height: 0.746rem;
+    height:0.533rem;
+    line-height: 0.533rem;
     text-align: center;
-    font-size: 0.266rem;
+    font-size: 0.213rem;
     color:#30BBBE
 }
 .color-bg {
-    background-color: #30BBBE;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
 }
 .grid-item{
-    width:4.666rem;
+    width:6.69rem;
+}
+.fixed_footer{
+    position:fixed;
+    left:0;
+    bottom:0;
+}
+.wrapper_footer{
+   z-index: 100;
+   display:flex;
+   align-content: center;
+   justify-content: center;
+   width:100%;
+   height:1.266rem;
+   margin-top: -1.266rem;
+   background:rgba(0, 0, 0, 0.4);
+}
+.wrapper_footer .inquiry{
+    width:1.973rem;
+    height:1.8rem;
+    margin:-1.06rem auto 0;
+    border-radius:50%;
+}
+.inquiry>img{
+    width:100%;
+    height:100%;
+}
+.wrapper_footer .border-dashede{
+    z-index: 120;
+    position: relative;
+    width: 100%;
+    height:0.12rem;
+    border-top: 1px dashed #70cdcf
 }

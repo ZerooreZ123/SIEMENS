@@ -39,10 +39,20 @@
         </div>
         {/foreach}
     </div>
+    <div class="wrapper_footer fixed_footer">
+        <div class="border-dashede">
+            <div class="inquiry">
+                <img id="icon" src="__CDN__/assets/img/frontend/advert/inquiry_new.png">
+            </div>
+        </div>
+    </div>
 </div>
 <script>
     //默认tab栏目
     $(".tab").eq(0).addClass('color-bg');
+    $('.inquiry').on('click',function(event){
+        window.location.href='{:url("Company/dialog")}';
+    });
 
     //dom文档树加载完和所有文件加载完
     window.onload=function() {
