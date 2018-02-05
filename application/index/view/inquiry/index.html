@@ -20,6 +20,9 @@
         // $('.mask').show();
         // $('body').removeClass('background_loose').addClass('background_lock');
     });
+    $('.imgBox').on('click',function(event){
+        window.location.href='{:url("Company/dialog",["id"=>$inf["id"]])}';
+    });
     // $('.mask').on('click',function(event){
     //     var _con = $('.mask');
     //     if( _con.has(event.target).length === 0){
@@ -71,22 +74,22 @@ function check(form) {
             {$inf['content']}
         </div>
         <div class='imgShow'>
-            <div class='imgBox'>
+            <a class='imgBox'>
                 <img src="__CDN__{$inf['image']}">
                 <div class='textShow'>XL-II连接演示</div>
-            </div>
-            <div class='imgBox'>
+            </a>
+            <a class='imgBox'>
                 <img src="__CDN__{$inf['image']}">
                 <div class='textShow'>XL-II连接演示</div>
-            </div>
-            <div class='imgBox'>
+            </a>
+            <a class='imgBox'>
                 <img src="__CDN__{$inf['image']}">
                 <div class='textShow'>XL-II连接演示</div>
-            </div>
-            <div class='imgBox'>
+            </a>
+            <a class='imgBox'>
                 <img src="__CDN__{$inf['image']}">
                 <div class='textShow'>XL-II连接演示</div>
-            </div>
+            </a>
         </div>
     </div>
     <div class="wrapper_footer fixed_footer">
