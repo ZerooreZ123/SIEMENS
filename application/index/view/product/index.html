@@ -27,7 +27,7 @@
         {foreach name="product" item="vo"}
         <div class="content grid" style="display:none;">
             {foreach name="vo" item="v"}
-            <a href="{:url('Inquiry/index',['id'=>$v['id']])}" class="grid-item">
+            <a href="{:url('Inquiry/index',['id'=>$v['id'],'pmodel_id'=>$v['pmodel_id']])}" class="grid-item">
                 <div class="box">
                     <div class="inf-img">
                         <img width="120" src="__CDN__{$v.image}">

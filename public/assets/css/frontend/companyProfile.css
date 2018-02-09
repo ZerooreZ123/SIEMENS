@@ -44,6 +44,7 @@ a{
 .video{
     width:100%;
     height:4.826rem;
+    margin-bottom:0.133rem
 }
 .wrapper_container .content .banner{
     width:100%;
@@ -89,7 +90,7 @@ a{
     display: block;
     position: absolute;
     top: -1.2rem;
-    bottom:-1.933rem;
+    bottom:-2rem;
     background: #69bdbe;
 }
 .progressBar::before{

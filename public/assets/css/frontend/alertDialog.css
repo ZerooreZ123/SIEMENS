@@ -15,7 +15,7 @@ body{
     text-align: center;
     line-height: 2rem;
     color:#fff;
-    background:#30bbbe;
+    background:linear-gradient(to right,#83dfd8,#00afbc,#01b8f2);
 }
 .dialog .form_box{
     margin: 0 0.333rem;

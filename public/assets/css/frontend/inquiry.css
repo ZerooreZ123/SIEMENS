@@ -63,6 +63,8 @@ body{
 }
 .imgShow{
     margin:0.4rem 0.093rem 1.6rem ;
+    overflow: hidden;
+
 }
 .imgBox{
     position: relative;

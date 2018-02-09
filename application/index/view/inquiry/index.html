@@ -20,9 +20,9 @@
         // $('.mask').show();
         // $('body').removeClass('background_loose').addClass('background_lock');
     });
-    $('.imgBox').on('click',function(event){
+    /* $('.imgBox').on('click',function(event){
         window.location.href='{:url("Company/dialog",["id"=>$inf["id"]])}';
-    });
+    }); */
     // $('.mask').on('click',function(event){
     //     var _con = $('.mask');
     //     if( _con.has(event.target).length === 0){
@@ -74,22 +74,12 @@ function check(form) {
             {$inf['content']}
         </div>
         <div class='imgShow'>
-            <a class='imgBox'>
-                <img src="__CDN__{$inf['image']}">
-                <div class='textShow'>XL-II连接演示</div>
+            {foreach name="product" item="v"}
+			<a href="{:url('Inquiry/index',['id'=>$v['id'],'pmodel_id'=>$v['pmodel_id']])}" class='imgBox'>
+                <img src="__CDN__{$v.image}">
+                <div class='textShow'>{$v.title}</div>
             </a>
-            <a class='imgBox'>
-                <img src="__CDN__{$inf['image']}">
-                <div class='textShow'>XL-II连接演示</div>
-            </a>
-            <a class='imgBox'>
-                <img src="__CDN__{$inf['image']}">
-                <div class='textShow'>XL-II连接演示</div>
-            </a>
-            <a class='imgBox'>
-                <img src="__CDN__{$inf['image']}">
-                <div class='textShow'>XL-II连接演示</div>
-            </a>
+			{/foreach}
         </div>
     </div>
     <div class="wrapper_footer fixed_footer">

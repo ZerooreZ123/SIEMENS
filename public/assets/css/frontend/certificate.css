@@ -8,7 +8,7 @@
     color: #fff;
     line-height: 1.066rem;
     text-align: center;
-    background-color: #29b8c2;
+    background:linear-gradient(to right,#83dfd8,#00afbc,#01b8f2);
 }
 .grid_img{
     max-width: 10rem !important;

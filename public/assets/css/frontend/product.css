@@ -19,7 +19,7 @@ a{
     line-height: 0.8rem;
     font-size:0.24rem;
     color:#fff;
-    background:#30bbbe;
+    background:linear-gradient(to right,#83dfd8,#00afbc,#01b8f2);
 }
 .title>span:nth-child(1) {
     display:inline-block;
@@ -39,7 +39,7 @@ a{
     width:27%;
     height: 100%;
     color:#fff;
-    background: #30bbbe;
+    background:linear-gradient(to right,#83dfd8,#01b8f2);
 
 }
 .tabBox .tab{
