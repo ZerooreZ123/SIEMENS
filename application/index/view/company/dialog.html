@@ -25,13 +25,27 @@
                     <label for="phoneNum">手机号:</label>
                     <input type="text" name="phone" placeholder="请填写正确手机号码" id="phoneNum">
                 </div>
-                <div class="phone_box">
-                    <label for="stage">阶段:</label>
-                    <input type="text" name="stage" placeholder="请填写阶段" id="stage">
+                <div class="type_box">
+                    <span>阶段:</span>
+                    <select name="stage" class="selectdeleted">
+                        <option value="立项">立项</option>
+                        <option value="初步设计">初步设计</option>
+                        <option value="详细设计">详细设计</option>
+                        <option value="招投标">招投标</option>
+                    </select>
+                   <!--  <input type="text" name="stage" placeholder="请填写阶段" id="stage"> -->
                 </div>
-                <div class="phone_box">
-                    <label for="location">所在地:</label>
-                    <input type="text" name="location" placeholder="请填写所在地" id="location">
+                <div class="type_box">
+                    <span>所在地:</span>
+                     <select name="location" class="selectdeleted">
+                        <option value="业主">业主</option>
+                        <option value="总包商">总包商</option>
+                        <option value="经销商">经销商</option>
+                        <option value="设计院">设计院</option>
+                        <option value="咨询顾问公司">咨询顾问公司</option>
+                        
+                    </select>
+                    <!-- <input type="text" name="location" placeholder="请填写所在地" id="location"> -->
                 </div>
                 <div class="type_box">
                     <span>询价型号:</span>

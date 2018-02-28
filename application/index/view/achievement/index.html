@@ -17,7 +17,7 @@
             {foreach name="list" item="vo"}
             <a href="{:url('Achievement/details',['id'=>$vo.id])}">
                 <li class="achievement_single">
-                    <p class="text">{$vo.title}</p>
+                    <p class="text" style="width: 60px;">{$vo.title}</p>
                     <div class="img_box"><img src="__CDN__{$vo.image}"></div>
                 </li>
             </a>

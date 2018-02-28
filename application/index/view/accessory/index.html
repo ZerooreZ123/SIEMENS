@@ -15,7 +15,7 @@
 
     // 弹窗
     $('.inquiry').on('click',function(event){
-        window.location.href='{:url("Company/dialog",["id"=>$inf["id"]])}';
+        window.location.href='{:url("Company/dialog",["id"=>$inf["product_id"]])}';
         // event.stopPropagation();
         // $('.mask').show();
         // $('body').removeClass('background_loose').addClass('background_lock');
@@ -72,14 +72,6 @@ function check(form) {
         </div>
         <div class="content_M">
             {$inf['content']}
-        </div>
-        <div class='imgShow'>
-            {foreach name="accessory" item="v"}
-			<a href="{:url('Accessory/index',['id'=>$v['id']])}" class='imgBox'>
-                <img src="__CDN__{$v.image}">
-                <div class='textShow'>{$v.title}</div>
-            </a>
-			{/foreach}
         </div>
     </div>
     <div class="wrapper_footer fixed_footer">
