@@ -162,9 +162,9 @@ a{
     top: 3.78rem;
     bottom: -4rem;
     background: #69bdbe;
-    transform: rotate(90deg) translate(-3.65rem,1.52rem);
-    -webkit-transform:rotate(90deg) translate(-3.65rem,1.52rem);
-    -moz-transform:rotate(90deg) translate(-3.65rem,1.52rem);
+    transform: rotate(90deg) translate(-3.65rem,1.48rem);
+    -webkit-transform:rotate(90deg) translate(-3.65rem,1.48rem);
+    -moz-transform:rotate(90deg) translate(-3.65rem,1.48rem);
 }
 .container_box .container_2{
     display:none;

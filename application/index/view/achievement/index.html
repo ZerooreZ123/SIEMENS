@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1,user-scalable=no,shrink-to-fit=no">
     <title>部分业绩</title>
     <link rel="stylesheet" href="__CDN__/assets/css/frontend/reset.css">
     <link rel="stylesheet" href="__CDN__/assets/css/frontend/achievement.css">
@@ -17,7 +18,7 @@
             {foreach name="list" item="vo"}
             <a href="{:url('Achievement/details',['id'=>$vo.id])}">
                 <li class="achievement_single">
-                    <p class="text" style="width: 60px;">{$vo.title}</p>
+                    <p class="text">{$vo.title}</p>
                     <div class="img_box"><img src="__CDN__{$vo.image}"></div>
                 </li>
             </a>

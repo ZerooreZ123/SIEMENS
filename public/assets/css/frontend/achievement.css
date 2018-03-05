@@ -35,8 +35,10 @@ body{
     position:absolute;
     top:50%;
     left:50%;
+    width:2.80rem;
     font-size:0.373rem;
     color:#fff;
+    text-align: center;
     transform: translate(-50%,-50%)
 }
 .achievement_list>a{

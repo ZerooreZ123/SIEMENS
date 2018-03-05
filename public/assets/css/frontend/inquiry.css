@@ -11,7 +11,7 @@
     margin-bottom:2rem !important;
 } */
 .content_H{
-    max-width: 10rem !important;
+    max-width: 100% !important;
   /*   margin-bottom:0.4rem !important; */
 }
 /* .content_H .p_all{
@@ -28,15 +28,15 @@
     text-align:center;
 } */
 .content_H .subtitle{
-    height: 0.853rem;
-    line-height: 0.853rem;
+    height: 1.173rem;
+    line-height: 1.173rem;
     text-align: center;
     font-size:0.4rem;
     color:#fff;
-    background: #30bbbe;
+    background:linear-gradient(to right,#83dfd8,#00afbc,#01b8f2);
 }
 .content_H .box{
-    max-width: 9.466rem !important;
+    max-width: 100% !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,10 +44,12 @@
 }
 .content_H img{
     display:inline-block;
-    max-width: 9.466rem !important;
+    max-width: 100% !important;
 }
 .content_M{
     margin:0 0.266rem;
+    word-wrap: break-word;
+    word-break: normal;
 }
 
 /* .content_M p,.content_M img{
