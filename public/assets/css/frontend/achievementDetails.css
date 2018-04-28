@@ -18,11 +18,14 @@ body{
     max-width:9.466rem !important;
     margin:0.266rem 0 0.4rem;
 }
-.content p{
+.content > *{
     max-width:9.466rem !important;
-    margin-top:0.373rem;
-    line-height:0.64rem;
-    font-size:0.346rem;
+    /* margin-top:0.373rem; */
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    /* line-height:0.64rem;
+    font-size:0.346rem; */
     color:#000;
-    
+    word-wrap: break-word;
+    word-break: normal 
 }

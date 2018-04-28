@@ -6,7 +6,10 @@
 body {
     font-size: 12px;
 }
-
+a{
+    text-decoration: none;
+    color: #000;
+}
 .container {
     padding: 10px;
 }
@@ -35,7 +38,7 @@ body {
 .info {
     /*height: 120px;*/
     padding: 0 10px;
-    background-color: #C0FDFE;
+    /* background-color: #C0FDFE; */
     display: none;
 }
 
